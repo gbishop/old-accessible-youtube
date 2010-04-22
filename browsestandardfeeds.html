@@ -1,0 +1,100 @@
+﻿<!--
+    Currently, there are no links to this file.
+    It's not very complete, but if someone wants to link to the standard
+    feeds, then they can start with this file.
+-->
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+    <head>
+    
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+        <title>SWAY: Choose Standard Feed</title>
+        <link rel="stylesheet" href="css/sway.css" type="text/css" />
+        <link rel="stylesheet" href="css/player.css" type="text/css" />
+        
+        <script type="text/javascript" src="js/dojo/dojo.js"></script>
+        
+        <script type="text/javascript" src="js/config.js"> </script>
+        <script type="text/javascript" src="js/string_manipulations.js"></script>
+        <script type="text/javascript" src="js/text_to_speech.js"></script>
+        <script type="text/javascript" src="js/node_access.js"></script>
+        <script type="text/javascript" src="js/change_menus.js"></script>
+        <script type="text/javascript" src="js/move_and_choose.js"></script>
+        <script type="text/javascript" src="js/handle_keys.js"></script>
+        <script type="text/javascript" src="js/toggle_UI.js"></script>
+        <script type="text/javascript" src="js/setup.js"></script>
+        <script type="text/javascript" src="js/choose_standard_feed.js"></script>
+        <script type="text/javascript">
+            dojo.addOnLoad(function() {
+                setupKeys();
+                setupChoicesForMouse();
+                selectFirstChoiceInMenu(dojo.byId("feedlist"));
+                connectKeys();
+            });
+        </script>
+    </head>
+    <body>
+        <div>
+            <h1>SWAY: Choose Standard Feed</h1>
+            <div id="feedlist" class="choicelist">
+                <table>
+                    <tbody>
+                        <tr style="vertical-align:bottom">
+                            <td>
+                                <div id="top_rated" class="choice" onchoose="chooseFeed" feed_id="top_rated">
+                                    Top rated
+                                </div>
+                            </td>
+                            <td>
+                                <div id="top_favorites" class="choice" onchoose="chooseFeed" feed_id="top_favorites">
+                                    Top favorites
+                                </div>
+                            </td>
+                            <td>
+                                <div id="most_viewed" class="choice" onchoose="chooseFeed" feed_id="most_viewed">
+                                    Most viewed
+                                </div>
+                            </td>
+                        </tr>
+                        <tr style="vertical-align:bottom">
+                            <td>
+                                <div id="most_popular" class="choice" onchoose="chooseFeed" feed_id="most_popular">
+                                    Most popular
+                                </div>
+                            </td>
+                            <td>
+                                <div id="most_recent" class="choice" onchoose="chooseFeed" feed_id="most_recent">
+                                    Most recent
+                                </div>
+                            </td>
+                            <td>
+                                <div id="most_discussed" class="choice" onchoose="chooseFeed" feed_id="most_discussed">
+                                    Most discussed
+                                </div>
+                            </td>
+                        </tr>
+                        <tr style="vertical-align:bottom">
+                            <td>
+                                <div id="most_responded" class="choice" onchoose="chooseFeed" feed_id="most_responded">
+                                    Most responded
+                                </div>
+                            </td>
+                            <td>
+                                <div id="recently_featured" class="choice" onchoose="chooseFeed" feed_id="recently_featured">
+                                    Recently featured
+                                </div>
+                            </td>
+                            <td>
+                                <div id="watch_on_mobile" class="choice" onchoose="chooseFeed" feed_id="watch_on_mobile">
+                                    Videos for mobile phones
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </body>
+</html>
+
